@@ -4,15 +4,6 @@ import BookItem from './BookItem';
 
 class BookList extends Component
 {
-    handleChange = (event) => {
-        alert(event.target.value);
-        /*
-        if (this.props.searchString) {
-            this.setState({ searchString: event.target.value })
-            this.props.searchString(event.target.value)
-        }
-        */
-    }
 
     render()
     {
