@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css' // Import css
+import bgImage from './icons/no_image_available.png';
 
 class BookItem extends Component 
 {
@@ -26,12 +27,15 @@ class BookItem extends Component
     render(){
 
         const {book, filterShelf} = this.props;
+
+        const bookImage = (book.imageLinks && book.imageLinks.thumbnail) 
+                            ? book.imageLinks.thumbnail : bgImage;
         
         return(
             <li key={book.id}>
                 <div className="book">
                 <div className="book-top">
-                    <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${book.imageLinks.thumbnail})` }}></div>
+                    <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${bookImage})` }}></div>
                     <div className="book-shelf-changer">
                     <select defaultValue={filterShelf} onChange={this.updateShelf}>
                         <option value="move" disabled>Move to...</option>
