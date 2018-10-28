@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import notFound from './icons/loading.gif';
 
 const NotFound = () => (
-    <div id="notfound">
-        <div class="notfound">
-            <div class="notfound-bg">
+    <div className="notfound-master">
+        <div className="notfound">
+            <div className="notfound-bg">
                 <div></div>
                 <div></div>
                 <div></div>

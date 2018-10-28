@@ -217,12 +217,12 @@ body, .app {
 }
 
 /**************** 404 NOT FOUND *******************/
-#notfound {
+.notfound-master {
   position: relative;
   height: 100vh;
   background-color: #fafbfd;
 }
-#notfound .notfound {
+.notfound-master .notfound {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -317,7 +317,7 @@ body, .app {
 
     .notfound .notfound-bg > div {
       height: 85px;
-  }
+    }
 }
 
 @media only screen and (max-width: 480px) {
